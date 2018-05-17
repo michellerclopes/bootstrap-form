@@ -12,67 +12,66 @@
     <!--Barra de navegação-->
     
     <nav class="navbar fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Formulário</a>
+        <a class="navbar-brand" href="https://michellerclopes.github.io/" target="_blank">Formulário por ML.</a>
     </nav>
 
     <!--Formulário-->
-    
-    <div class="container">
-    <form id="formulario" method="POST">
+    <div class="container-fluid">
+    <form id="formulario" method="">
         
         <!--Nome e CPF-->
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputNome">Nome</label>
+            <div class="form-group col-sm-6">
+                <label for="inputNome">Nome <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputNome" placeholder="Alan Turing" required>
             </div>
-            <div class="form-group col-md-6">
-                <label for="inputCPF">CPF</label>
-                <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+            <div class="form-group col-sm-6">
+                <label for="inputCPF">CPF <span class="sinalObrigatorio">*</span></label>
+                <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" onKeyUp="formatar('###.###.###-##', this)" required>
             </div>
         </div>
 
         <!--Endereço-->
         
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEndereco">Endereço</label>
+            <div class="form-group col-sm-6">
+                <label for="inputEndereco">Endereço <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputEndereco" placeholder="Avenida Rio Branco" required>
             </div>
-            <div class="form-group col-md-2">
-                <label for="inputNumero">Número</label>
+            <div class="form-group col-sm-2">
+                <label for="inputNumero">N.° <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputNumero" placeholder="00" required>
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputComplemento">Complemento</label>
+            <div class="form-group col-sm-4">
+                <label for="inputComplemento">Complemento <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputComplemento" placeholder="Apt. 00" required>
             </div>
-            <div class="form-group col-md-6">
-                <label for="inputCidade">Cidade</label>
+            <div class="form-group col-sm-6">
+                <label for="inputCidade">Cidade <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputCidade" placeholder="Rio de Janeiro" required>
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputEstado">Estado</label>
+            <div class="form-group col-sm-4">
+                <label for="inputEstado">Estado <span class="sinalObrigatorio">*</span></label>
                 <input type="text" class="form-control" id="inputEstado" placeholder="Rio de Janeiro" required>
             </div>
-            <div class="form-group col-md-2">
-                <label for="inputCEP">CEP</label>
-                <input type="text" class="form-control" id="inputCEP" placeholder="00000-00" pattern="\d{5}-?\d{3}" required>
+            <div class="form-group col-sm-2">
+                <label for="inputCEP">CEP <span class="sinalObrigatorio">*</span></label>
+                <input type="text" class="form-control" id="inputCEP" placeholder="00000-00" pattern="\d{5}-?\d{3}" maxlength="9" OnKeyUp="formatar('#####-###', this)" required>
             </div>
         </div>
 
         <!--Seleção de sexo e profissão-->
 
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="selectSexo">Sexo</label>
+            <div class="form-group col-sm-6">
+                <label for="selectSexo">Sexo <span class="sinalObrigatorio">*</span></label>
                 <select class="form-control" id="selectSexo">
                     <option>Masculino</option>
                     <option>Feminino</option>
                 </select>
             </div>
-            <div class="form-group col-md-6">
-                <label for="selectProfissao">Profissão</label>
+            <div class="form-group col-sm-6">
+                <label for="selectProfissao">Profissão <span class="sinalObrigatorio">*</span></label>
                 <select class="form-control" id="selectProfissao">
                     <option>Designer</option>
                     <option>Arquiteto(a)</option>
@@ -86,13 +85,12 @@
         <!--Botão de envio-->
 
         <div>
-            <button type="submit" class="btn btn-dark col-md-12 botaoEnvio" data-submit="Enviando...">Enviar</button>
+            <button type="submit" class="btn btn-dark col-md-12" id="botaoEnvioForm" data-submit="Enviando...">Enviar</button>
         </div>
 
     </form>
     </div> <!--fim do container-->
 
+    <script type="text/javascript" src="javascript/main.js"></script> <!--javascript-->
 </body>
 </html>
-
-
