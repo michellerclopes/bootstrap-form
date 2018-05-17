@@ -1,0 +1,19 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html body {
+	background-color: #f7f7f9;
+}
+
+#formulario {
+	margin: 0 20% 0 20%;
+	margin-top: 6rem;
+	background-color: #f7f7f9;
+}
+
+.botaoEnvio {
+	margin-top: 25px;
+	margin-bottom: 4em;
+}
